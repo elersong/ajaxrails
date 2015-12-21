@@ -1,0 +1,6 @@
+<!--items/items_list.html.erb-->
+<!--The js.erb file rendered by the #from_category action renders-->
+<!--this partial to format each item in the category for the table-->
+<% items.each do |item| %>
+    <td><%= item.name %></td>
+<% end %>

@@ -1,0 +1,9 @@
+<!--items/_categories_column.html.erb-->
+<!--This partial is rendered by the index.html.erb file-->
+<!--The user must click each category link before the-->
+<!--server will grab all items within the category-->
+<% categories.each do |cat| %>
+    <tr>
+        <td style="background-color: aquamarine;" id="<%= cat.id %>"><%= link_to cat.name, fetch_items_path(:id => cat.id), :remote => true %></td>
+    </tr>
+<% end %>
