@@ -11,6 +11,8 @@
 include a `respond_to` block so as to set-up the javascript file that will incorporate 
 the returned data into the DOM.
 
+        #ItemsController...
+        
         def from_category
             @selected = Item.where(:category_id => params[:id])
             @parent_id = params[:id]
