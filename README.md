@@ -25,6 +25,8 @@ the returned data into the DOM.
 4. Set up the js.erb file that will provide the view for the JS formatted request response
 data. This will also handle the tadk of weaving the response into the final AJAXed page.
 
+        # Using the id of the category to identify where to add data...
+        
         $('#<%= @parent_id %>').after(
             "<%= escape_javascript(render partial: 'items_list', locals: { items: @selected }) %>"
         );
