@@ -1,4 +1,4 @@
 <!--views/items/from_category.js.erb-->
 <!--Once the #fetch_items action has run its course, take the -->
 <!--returned data and plug it into the DOM where it's needed via js.erb-->
-$('#<%= @parent_id %>').after("<%= escape_javascript(render partial: 'items_list', locals: { items: @selected }) %>");
+$('#<%= @parent_id %>').replaceWith("<%= escape_javascript(render partial: 'items_list', locals: { items: @selected }) %>");
